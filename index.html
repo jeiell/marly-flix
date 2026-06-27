@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarlyFlix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Modo Claro</button>
+    <img src="assets/logo.png" class="logo" alt="Logotipo MarlyFlix">
+
+    <main>
+        <h1>Quem está assistindo?</h1>
+
+        <section class="profiles" aria-labelledby="profiles-title">
+            <h2 id="profiles-title">Seleção de perfis</h2>
+            <ul class="profiles-list">
+                <li class="profile">
+                    <figure>
+                        <img src="assets/perfil-1.jpg" alt="Perfil Natanael">
+                        <figcaption>Natanael</figcaption>
+                    </figure>
+                </li>
+                <li class="profile">
+                    <figure>
+                        <img src="assets/perfil-2.jpg" alt="Perfil Marly">
+                        <figcaption>Marly</figcaption>
+                    </figure>
+                </li>
+                <li class="profile">
+                    <figure>
+                        <img src="assets/perfil-3.jpg" alt="Perfil Pedro">
+                        <figcaption>Pedro</figcaption>
+                    </figure>
+                </li>
+                <li class="profile">
+                    <figure>
+                        <img src="assets/perfil-4.jpg" alt="Perfil Raul">
+                        <figcaption>Raul</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <section class="movies hidden" aria-labelledby="movies-title">
+            <div class="movies-header">
+                <h2 id="movies-title">Talvez você também goste</h2>
+                <p class="selected-profile" aria-live="polite"></p>
+                <nav class="movie-tabs" aria-label="Filtrar filmes">
+                    <a href="#" class="tab active">Episódios</a>
+                    <a href="#" class="tab">Mais títulos para assistir</a>
+                    <a href="#" class="tab">Planos</a>
+                </nav>
+            </div>
+            <button type="button" class="movie-back">Voltar aos perfis</button>
+
+            <div class="movie-row-wrapper">
+                <ul class="movie-list">
+                    <li class="movie-item">
+                        <figure>
+                            <img src="assets/Avatar-O-Caminho-da-Água.jpeg" alt="Avatar: O Caminho da Água">
+                            <figcaption>Avatar: O Caminho da Água</figcaption>
+                        </figure>
+                        <button type="button" class="movie-link"
+                            data-video="assets/Avatar-O-Caminho-da-Água.mp4">Assistir</button>
+                    </li>
+                    <li class="movie-item">
+                        <figure>
+                            <img src="assets/homem-de-ferro.jpg" alt="Homem de Ferro">
+                            <figcaption>Homem de Ferro</figcaption>
+                        </figure>
+                        <button type="button" class="movie-link"
+                            data-video="assets/homem-de-ferro.mp4">Assistir</button>
+                    </li>
+                    <li class="movie-item">
+                        <figure>
+                            <img src="assets/Querida-crianca.jpg" alt="Querida, Encolhi as Crianças">
+                            <figcaption>Querida, Encolhi as Crianças</figcaption>
+                        </figure>
+                        <button type="button" class="movie-link"
+                            data-video="assets/Querida-Encolhi-as-Crianças.mp4">Assistir</button>
+                    </li>
+                    <li class="movie-item">
+                        <figure>
+                            <img src="assets/Jurassic-Park.jpg" alt="Jurassic Park">
+                            <figcaption>Jurassic World</figcaption>
+                        </figure>
+                        <button type="button" class="movie-link" data-video="assets/Jurassic-Park.mp4">Assistir</button>
+                    </li>
+                    <li class="movie-item">
+                        <figure>
+                            <img src="assets/perfil-1.jpg" alt="Mulher-Gato">
+                            <figcaption>Mulher-Gato</figcaption>
+                        </figure>
+                        <button type="button" class="movie-link" data-video="assets/mulher-gato.mp4">Assistir</button>
+                    </li>
+                    <li class="movie-item">
+                        <figure>
+                            <img src="assets/perfil-2.jpg" alt="Shazam!">
+                            <figcaption>Shazam!</figcaption>
+                        </figure>
+                        <button type="button" class="movie-link" data-video="assets/shazam.mp4">Assistir</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="player-modal hidden" aria-hidden="true">
+            <div class="player-card">
+                <div class="player-header">
+                    <div>
+                        <h3 class="player-title">Trailer</h3>
+                        <p class="player-profile"></p>
+                    </div>
+                    <button type="button" class="player-close" aria-label="Fechar player">×</button>
+                </div>
+                <div class="player-body">
+                    <video class="player-video" controls>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+                <button type="button" class="player-back">Voltar aos perfis</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
